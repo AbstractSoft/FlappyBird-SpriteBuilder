@@ -4,9 +4,10 @@
 
 @implementation GamePlayScene
 
-- (void)initialize
+-(void)initialize
 {
-    // your code here
+    character = (Character *)[CCBReader load:@"Character"];
+    [physicsNode addChild:character];
 }
 
 -(void)update:(CCTime)delta
@@ -14,6 +15,16 @@
     // put update code here
 }
 
-// put new methods here
+-(void)showScore
+{
+
+}
+
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    // this will get called everytime the player touches the screen
+}
+
+
 
 @end
